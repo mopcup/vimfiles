@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -45,7 +44,7 @@ endfunction
 set imactivatefunc=ImActivate
 
 function! ImStatus()
-  return system('fcitx-remote')[0] is# '2'
+	return system('fcitx-remote')[0] is# '2'
 endfunction
 set imstatusfunc=ImStatus
 
@@ -58,4 +57,45 @@ set ttimeoutlen=50
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
 let g:airline#extensions#tabline#buffer_idx_mode = 1
+let g:airline#extensions#tabline#buffer_idx_format = {
+			\ '0': '0 ',
+			\ '1': '1 ',
+			\ '2': '2 ',
+			\ '3': '3 ',
+			\ '4': '4 ',
+			\ '5': '5 ',
+			\ '6': '6 ',
+			\ '7': '7 ',
+			\ '8': '8 ',
+			\ '9': '9 '
+			\}
+let g:airline_mode_map = {
+			\ 'n'  : 'Normal',
+			\ 'i'  : 'Insert',
+			\ 'R'  : 'Replace',
+			\ 'c'  : 'Command',
+			\ 'v'  : 'Visual',
+			\ 'V'  : 'V-Line',
+			\ '⌃V' : 'V-Block',
+			\ }
+
+let g:airline#extensions#default#layout = [
+			\ [ 'a', 'b', 'c' ],
+			\ ['z']
+			\ ]
+let g:airline_section_c = '%t %M'
+let g:airline_section_z = get(g:, 'airline_linecolumn_prefix', '').'%3l:%-2v'
+" 変更がなければdiffの行数を表示しない
+let g:airline#extensions#hunks#non_zero_only = 1 
+
+" タブラインの表示を変更する
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 1
+let g:airline#extensions#tabline#show_close_button = 0
