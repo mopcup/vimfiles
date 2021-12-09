@@ -7,7 +7,6 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set encoding=UTF-8
@@ -50,5 +49,13 @@ function! ImStatus()
 endfunction
 set imstatusfunc=ImStatus
 
+set t_Co=256
 syntax enable
 colorscheme tokyonight
+let g:airline_theme = 'tokyonight'
+
+set ttimeoutlen=50
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
