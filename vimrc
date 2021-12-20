@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -6,6 +8,7 @@ Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set encoding=UTF-8
