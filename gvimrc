@@ -1,4 +1,3 @@
-set termguicolors
 set guioptions=egLt
 set guifont=JetBrains\ Mono\ SemiBold\ 11
 

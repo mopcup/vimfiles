@@ -2,10 +2,6 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-lsp-settings'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
@@ -46,6 +42,7 @@ endfunction
 set imstatusfunc=ImStatus
 
 set t_Co=256
+set termguicolors
 syntax enable
 colorscheme tokyonight
 let g:airline_theme = 'tokyonight'
