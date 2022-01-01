@@ -24,7 +24,7 @@ set ignorecase
 set smartcase
 
 set backspace=indent,eol,start
-set clipboard=unnamed
+set clipboard+=unnamed
 
 set number
 set title
@@ -98,8 +98,8 @@ let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#show_close_button = 0
 
-nnoremap <silent><leader>r :QuickRun -mode n <CR>
-vnoremap <silent><leader>r :QuickRun -mode v <CR>
+nnoremap <silent><leader>r :QuickRun -mode n<CR>
+vnoremap <silent><leader>r :QuickRun -mode v<CR>
 let g:quickrun_config = {}
 let g:quickrun_config._ = {
     \ 'outputter/error/success': 'buffer',
