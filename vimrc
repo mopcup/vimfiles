@@ -5,6 +5,9 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter'
+Plug 'thinca/vim-quickrun'
+Plug 'Shougo/vimproc.vim', {'do': 'make'}
 call plug#end()
 
 set encoding=UTF-8
@@ -14,6 +17,7 @@ set termencoding=UTF-8
 set backupdir=$HOME/.vim/_tmp
 set directory=$HOME/.vim/_tmp
 
+nnoremap <ESC><ESC> :nohl<CR>
 set incsearch
 set hlsearch
 set ignorecase
@@ -28,6 +32,9 @@ set showmatch
 
 set belloff=all
 set helplang=ja
+
+set splitbelow
+set splitright
 
 function! ImActivate(active)
 	if !a:active
@@ -48,11 +55,11 @@ colorscheme tokyonight
 let g:airline_theme = 'tokyonight'
 
 set ttimeoutlen=50
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
-nmap <C-p> <Plug>AirlineSelectPrevTab
-nmap <C-n> <Plug>AirlineSelectNextTab
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_idx_format = {
 			\ '0': '0 ',
@@ -91,3 +98,14 @@ let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#show_close_button = 0
 
+nnoremap <silent><leader>r :QuickRun -mode n <CR>
+vnoremap <silent><leader>r :QuickRun -mode v <CR>
+let g:quickrun_config = {}
+let g:quickrun_config._ = {
+    \ 'outputter/error/success': 'buffer',
+    \ 'outputter/error/error': 'quickfix',
+    \ 'outputter/quickfix/open_cmd': 'copen',
+    \ 'runner': 'vimproc',
+    \ 'runner/vimproc/updatetime': 60,
+    \ 'hook/time/enable': 1
+		\ }
