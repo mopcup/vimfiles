@@ -111,3 +111,11 @@ let g:quickrun_config._ = {
 			\ 'runner/vimproc/updatetime': 60,
 			\ 'hook/time/enable': 1
 			\ }
+
+if !executable('clangd')
+	" This is only for vim on buster
+	let g:lsp_settings = {
+				\ 'clangd': {'cmd': ['clangd-12']},
+				\ 'efm-langserver': {'disabled': v:false}
+				\ }
+endif
