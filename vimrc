@@ -8,6 +8,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'thinca/vim-quickrun'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 call plug#end()
 
 set encoding=UTF-8
