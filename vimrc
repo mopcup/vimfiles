@@ -10,6 +10,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 set encoding=UTF-8
