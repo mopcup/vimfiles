@@ -105,10 +105,18 @@ nnoremap <silent><leader>r :QuickRun -mode n<CR>
 vnoremap <silent><leader>r :QuickRun -mode v<CR>
 let g:quickrun_config = {}
 let g:quickrun_config._ = {
-    \ 'outputter/error/success': 'buffer',
-    \ 'outputter/error/error': 'quickfix',
-    \ 'outputter/quickfix/open_cmd': 'copen',
-    \ 'runner': 'vimproc',
-    \ 'runner/vimproc/updatetime': 60,
-    \ 'hook/time/enable': 1
-		\ }
+			\ 'outputter/error/success': 'buffer',
+			\ 'outputter/error/error': 'quickfix',
+			\ 'outputter/quickfix/open_cmd': 'copen',
+			\ 'runner': 'vimproc',
+			\ 'runner/vimproc/updatetime': 60,
+			\ 'hook/time/enable': 1
+			\ }
+
+if !executable('clangd')
+	" This is only for vim on buster
+	let g:lsp_settings = {
+				\ 'clangd': {'cmd': ['clangd-12']},
+				\ 'efm-langserver': {'disabled': v:false}
+				\ }
+endif
