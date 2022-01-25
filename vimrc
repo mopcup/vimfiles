@@ -1,9 +1,11 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
-Plug 'ghifarit53/tokyonight-vim'
+"Plug 'ghifarit53/tokyonight-vim'
+Plug 'sainnhe/everforest'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
 Plug 'thinca/vim-quickrun'
@@ -51,11 +53,13 @@ function! ImStatus()
 endfunction
 set imstatusfunc=ImStatus
 
+syntax enable
 set t_Co=256
 set termguicolors
-syntax enable
-colorscheme tokyonight
-let g:airline_theme = 'tokyonight'
+set background=dark 
+let g:everforest_background = 'hard'
+colorscheme everforest
+let g:airline_theme = 'everforest'
 
 set ttimeoutlen=50
 nmap <C-p> <Plug>AirlineSelectPrevTab
