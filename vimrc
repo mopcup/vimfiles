@@ -1,18 +1,27 @@
 set nocompatible
 
 call plug#begin('~/.vim/plugged')
+Plug 'vim-jp/vimdoc-ja'
+
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+
 "Plug 'ghifarit53/tokyonight-vim'
 Plug 'sainnhe/everforest'
-Plug 'vim-jp/vimdoc-ja'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 Plug 'sheerun/vim-polyglot'
+
 Plug 'airblade/vim-gitgutter'
+
 Plug 'thinca/vim-quickrun'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
+
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-Plug 'tpope/vim-surround'
+
+Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 call plug#end()
 
 set encoding=UTF-8
