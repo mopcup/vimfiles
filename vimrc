@@ -38,7 +38,7 @@ set ignorecase
 set smartcase
 
 set backspace=indent,eol,start
-set clipboard+=unnamed
+set clipboard=unnamedplus
 
 set number
 set title
