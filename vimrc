@@ -18,10 +18,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'thinca/vim-quickrun'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+" 
+" Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 call plug#end()
 
 set encoding=UTF-8
@@ -62,6 +62,7 @@ function! ImStatus()
 endfunction
 set imstatusfunc=ImStatus
 
+filetype on
 syntax enable
 set t_Co=256
 set termguicolors

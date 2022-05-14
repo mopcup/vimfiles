@@ -1,3 +1,3 @@
 set guioptions=egt
-set guifont=JetBrains\ Mono\ 13
-set guifontwide=Ricty\ Diminished\ 13
+set guifont=UDEV\ Gothic\ 35NF\ 12
+set guifontwide=UDEV\ Gothic\ 35NF\ 12
